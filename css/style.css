@@ -1,0 +1,511 @@
+/* =========================================================
+   GALLETAS BERE — hoja de estilos
+   -----------------------------------------------------------
+   Guía rápida para editar:
+   - Colores y fuentes: variables al inicio, sección "TOKENS"
+   - Cada sección del sitio tiene su propio bloque de comentarios
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;700&display=swap');
+
+/* ---------- TOKENS: colores, tipografías, espaciados ---------- */
+:root{
+  /* Paleta "tierra de cocina" tomada de las fotos reales de los cakes */
+  --cream:      #FBF2E4;   /* fondo general, como la encimera de madera clara */
+  --paper:      #FFFDF8;   /* tarjetas / superficies */
+  --cocoa:      #4A2E20;   /* texto principal, cacao oscuro */
+  --cocoa-soft: #7A5B45;   /* texto secundario */
+  --terracotta: #C1602C;   /* acento principal, canela horneada */
+  --rose:       #BE4F63;   /* acento secundario, flores de las fotos */
+  --wheat:      #E3A94E;   /* acento cálido, corteza dorada */
+  --sage:       #8A9459;   /* detalle verde, hojas */
+  --line:       #E7D8C2;   /* líneas y bordes suaves */
+
+  --font-hand:  'Caveat', cursive;
+  --font-head:  'Fraunces', serif;
+  --font-body:  'Karla', sans-serif;
+
+  --radius: 14px;
+  --shadow-card: 0 10px 26px rgba(74, 46, 32, 0.14);
+  --max-width: 1180px;
+}
+
+/* ---------- RESET BÁSICO ---------- */
+*, *::before, *::after{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  background: var(--cream);
+  color: var(--cocoa);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img{ max-width:100%; display:block; }
+a{ color: inherit; }
+ul{ list-style:none; margin:0; padding:0; }
+h1,h2,h3{ margin:0; font-weight:600; }
+p{ margin:0; }
+.container{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+:focus-visible{
+  outline: 3px solid var(--terracotta);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *{ animation:none !important; transition:none !important; }
+}
+
+/* ---------- Elementos reutilizables ---------- */
+.eyebrow{
+  display:inline-block;
+  font-family: var(--font-body);
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-size:.75rem;
+  color: var(--terracotta);
+  margin-bottom:10px;
+}
+.section-title{
+  font-family: var(--font-head);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--cocoa);
+  max-width: 30ch;
+}
+.section-lede{
+  font-size:1.05rem;
+  color: var(--cocoa-soft);
+  max-width: 56ch;
+  margin-top:14px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-weight:700;
+  font-size:.95rem;
+  text-decoration:none;
+  border: 2px solid transparent;
+  cursor:pointer;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn:hover{ transform: translateY(-2px); }
+.btn-primary{
+  background: var(--terracotta);
+  color: var(--paper);
+  box-shadow: 0 8px 18px rgba(193, 96, 44, 0.35);
+}
+.btn-primary:hover{ background:#A94F21; }
+.btn-outline{
+  background: transparent;
+  border-color: var(--cocoa);
+  color: var(--cocoa);
+}
+.btn-outline:hover{ background: var(--cocoa); color: var(--paper); }
+
+/* ---------- HEADER ---------- */
+.site-header{
+  position: sticky; top:0; z-index: 50;
+  background: rgba(251, 242, 228, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px dashed var(--line);
+}
+.site-header .container{
+  display:flex; align-items:center; justify-content:space-between;
+  padding-top:14px; padding-bottom:14px;
+}
+.logo{
+  font-family: var(--font-hand);
+  font-size: 2rem;
+  font-weight:700;
+  color: var(--terracotta);
+  text-decoration:none;
+  line-height:1;
+}
+.logo span{ color: var(--cocoa); }
+.nav-links{
+  display:flex; gap:34px;
+}
+.nav-links a{
+  text-decoration:none;
+  font-weight:700;
+  font-size:.95rem;
+  color: var(--cocoa);
+  position:relative;
+  padding:4px 0;
+}
+.nav-links a::after{
+  content:'';
+  position:absolute; left:0; bottom:-3px;
+  width:0; height:2px; background: var(--terracotta);
+  transition: width .2s ease;
+}
+.nav-links a:hover::after{ width:100%; }
+
+.nav-toggle{
+  display:none;
+  background:none; border:none; cursor:pointer;
+  padding:6px;
+}
+.nav-toggle span{
+  display:block; width:26px; height:3px; margin:5px 0;
+  background: var(--cocoa); border-radius:2px;
+}
+
+@media (max-width: 780px){
+  .nav-toggle{ display:block; }
+  .nav-links{
+    position:absolute; top:100%; left:0; right:0;
+    background: var(--paper);
+    flex-direction:column;
+    gap:0;
+    max-height:0;
+    overflow:hidden;
+    border-bottom: 2px dashed var(--line);
+    transition: max-height .25s ease;
+  }
+  .nav-links.open{ max-height:320px; }
+  .nav-links li{ border-top:1px solid var(--line); }
+  .nav-links a{ display:block; padding:16px 24px; }
+  .nav-links a::after{ display:none; }
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  padding: 72px 0 90px;
+  overflow:hidden;
+}
+.hero .container{
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 50px;
+  align-items:center;
+}
+.hero h1{
+  font-family: var(--font-hand);
+  font-size: clamp(2.6rem, 5.2vw, 4.2rem);
+  color: var(--cocoa);
+  line-height:1.05;
+}
+.hero h1 em{
+  font-style:normal;
+  color: var(--terracotta);
+}
+.hero p{
+  margin-top:20px;
+  font-size:1.1rem;
+  color: var(--cocoa-soft);
+  max-width: 46ch;
+}
+.hero-ctas{
+  margin-top: 30px;
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+/* Collage de fotos "pegadas" tipo scrapbook */
+.hero-collage{
+  position:relative;
+  height: 380px;
+}
+.polaroid{
+  position:absolute;
+  background: var(--paper);
+  padding: 10px 10px 14px;
+  border-radius: 6px;
+  box-shadow: var(--shadow-card);
+  width: 190px;
+}
+.polaroid img{ border-radius:2px; }
+.polaroid::before{
+  content:'';
+  position:absolute;
+  top:-12px; left:50%;
+  width: 64px; height: 22px;
+  transform: translateX(-50%) rotate(-4deg);
+  background: var(--wheat);
+  opacity:.8;
+}
+.polaroid.p1{ top:0; left:6%; transform: rotate(-7deg); z-index:2; }
+.polaroid.p2{ top:14%; left:40%; transform: rotate(5deg); z-index:3; width:200px; }
+.polaroid.p3{ top:52%; left:8%; transform: rotate(4deg); z-index:1; }
+.polaroid.p1::before{ background: var(--rose); }
+.polaroid.p2::before{ background: var(--terracotta); }
+.polaroid.p3::before{ background: var(--sage); }
+
+@media (max-width: 900px){
+  .hero .container{ grid-template-columns: 1fr; }
+  .hero-collage{ height:300px; margin-top:10px; }
+  .polaroid{ width:150px; }
+  .polaroid.p2{ width:160px; }
+}
+
+/* ---------- PROCESO GENERAL ---------- */
+.proceso{
+  padding: 90px 0;
+  background: var(--paper);
+  border-top: 2px dashed var(--line);
+  border-bottom: 2px dashed var(--line);
+}
+.proceso-head{ max-width: 640px; }
+.proceso-steps{
+  margin-top: 48px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+.proceso-step{
+  position:relative;
+  padding-top: 8px;
+}
+.proceso-step .num{
+  font-family: var(--font-hand);
+  font-size: 2.6rem;
+  color: var(--terracotta);
+  line-height:1;
+}
+.proceso-step h3{
+  font-family: var(--font-head);
+  font-size:1.15rem;
+  margin-top:8px;
+}
+.proceso-step p{
+  margin-top:8px;
+  font-size:.95rem;
+  color: var(--cocoa-soft);
+}
+@media (max-width: 860px){
+  .proceso-steps{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px){
+  .proceso-steps{ grid-template-columns: 1fr; }
+}
+
+/* ---------- SABORES / CATÁLOGO ---------- */
+.sabores{
+  padding: 90px 0;
+}
+.sabores-head{ max-width: 640px; margin-bottom: 50px; }
+
+.recipe-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 42px 30px;
+}
+
+.recipe-card{
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+  display:flex;
+  flex-direction:column;
+}
+
+.recipe-photo-frame{
+  position:relative;
+  align-self:center;
+  background: var(--paper);
+  padding: 10px 10px 22px;
+  box-shadow: 0 10px 18px rgba(74,46,32,.18);
+  margin-top: 14px;
+  margin-bottom: 20px;
+}
+.recipe-photo-frame::before{
+  content:'';
+  position:absolute;
+  top:-11px; left:50%;
+  width: 58px; height:20px;
+  transform: translateX(-50%) rotate(-3deg);
+  opacity:.8;
+}
+.recipe-photo-frame img{ width: 100%; height:210px; object-fit:cover; }
+.recipe-placeholder{
+  width:100%; height:210px;
+  display:flex; align-items:center; justify-content:center;
+  background: #FBF2E4;
+}
+.recipe-placeholder svg{ width:86px; height:86px; }
+.placeholder-caption{
+  text-align:center;
+  font-size:.78rem;
+  color: var(--cocoa-soft);
+  margin-top:8px;
+  font-style:italic;
+}
+
+/* rotaciones y colores de cinta alternados por tarjeta */
+.recipe-card:nth-child(7n+1) .recipe-photo-frame{ transform: rotate(-3deg); }
+.recipe-card:nth-child(7n+2) .recipe-photo-frame{ transform: rotate(2deg); }
+.recipe-card:nth-child(7n+3) .recipe-photo-frame{ transform: rotate(-2deg); }
+.recipe-card:nth-child(7n+4) .recipe-photo-frame{ transform: rotate(3deg); }
+.recipe-card:nth-child(7n+5) .recipe-photo-frame{ transform: rotate(-4deg); }
+.recipe-card:nth-child(7n+6) .recipe-photo-frame{ transform: rotate(2deg); }
+.recipe-card:nth-child(7n+7) .recipe-photo-frame{ transform: rotate(-2deg); }
+
+.recipe-card:nth-child(5n+1) .recipe-photo-frame::before{ background: var(--terracotta); }
+.recipe-card:nth-child(5n+2) .recipe-photo-frame::before{ background: var(--rose); }
+.recipe-card:nth-child(5n+3) .recipe-photo-frame::before{ background: var(--wheat); }
+.recipe-card:nth-child(5n+4) .recipe-photo-frame::before{ background: var(--sage); }
+.recipe-card:nth-child(5n+5) .recipe-photo-frame::before{ background: var(--terracotta); }
+
+.recipe-eyebrow{
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color: var(--cocoa-soft);
+}
+.recipe-card h3{
+  font-family: var(--font-hand);
+  font-size: 1.9rem;
+  color: var(--cocoa);
+  margin-top:2px;
+}
+.recipe-desc{
+  margin-top: 8px;
+  font-size:.95rem;
+  color: var(--cocoa-soft);
+}
+.recipe-tags{
+  margin-top: 14px;
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.tag{
+  font-size:.72rem;
+  font-weight:700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #F3E3CC;
+  color: var(--cocoa);
+}
+
+/* Acordeón "Ver cómo se hace" hecho con <details> — sin necesidad de JS */
+.recipe-card details{
+  margin-top: 16px;
+  border-top: 1px dashed var(--line);
+  padding-top: 12px;
+}
+.recipe-card summary{
+  cursor:pointer;
+  font-weight:700;
+  font-size:.92rem;
+  color: var(--terracotta);
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.recipe-card summary::-webkit-details-marker{ display:none; }
+.recipe-card summary::after{
+  content:'+';
+  margin-left:auto;
+  font-size:1.2rem;
+  transition: transform .2s ease;
+}
+.recipe-card details[open] summary::after{ content:'−'; }
+
+.recipe-detail{ margin-top:14px; font-size:.92rem; }
+.recipe-detail h4{
+  font-family: var(--font-body);
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  color: var(--cocoa-soft);
+  margin-bottom:8px;
+}
+.recipe-detail .ingredientes{
+  display:flex; flex-wrap:wrap; gap:6px;
+  margin-bottom: 16px;
+}
+.recipe-detail .ingredientes li{
+  background: var(--cream);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: .8rem;
+}
+.recipe-detail ol{
+  margin:0; padding-left: 1.2em;
+  display:flex; flex-direction:column; gap:8px;
+}
+.recipe-detail li::marker{
+  color: var(--terracotta);
+  font-weight:700;
+}
+.recipe-note{
+  margin-top: 14px;
+  font-size:.8rem;
+  color: var(--cocoa-soft);
+  font-style: italic;
+}
+
+/* ---------- CONTACTO ---------- */
+.contacto{
+  padding: 90px 0;
+  background: var(--cocoa);
+  color: var(--cream);
+  border-top: 2px dashed var(--wheat);
+}
+.contacto .eyebrow{ color: var(--wheat); }
+.contacto .section-title{ color: var(--paper); }
+.contacto .section-lede{ color: #E7D6C4; }
+
+.contact-grid{
+  margin-top: 44px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.contact-card{
+  background: rgba(255,253,248,0.06);
+  border: 1px solid rgba(255,253,248,0.18);
+  border-radius: var(--radius);
+  padding: 26px;
+}
+.contact-card .icon{
+  width:42px; height:42px;
+  margin-bottom:14px;
+}
+.contact-card h3{
+  font-family: var(--font-head);
+  font-size:1.15rem;
+  color: var(--paper);
+}
+.contact-card p{
+  margin-top:8px;
+  color: #E7D6C4;
+  font-size:.92rem;
+}
+.contact-card a.btn{ margin-top:16px; }
+.contact-placeholder-note{
+  margin-top: 34px;
+  font-size:.85rem;
+  color: #C9B7A2;
+  font-style: italic;
+}
+
+@media (max-width: 860px){
+  .contact-grid{ grid-template-columns: 1fr; }
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer{
+  padding: 30px 0;
+  text-align:center;
+  font-size:.85rem;
+  color: var(--cocoa-soft);
+}
+.site-footer strong{ color: var(--terracotta); font-family: var(--font-hand); font-size:1.1rem; }
