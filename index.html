@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Galletas Bere — Cakes caseros hechos con cariño</title>
-<meta name="description" content="Conoce cómo preparamos nuestros cakes artesanales: sabores, proceso e información de contacto.">
+<title>Bere & Miga — Cakes caseros hechos con cariño</title>
+<meta name="description" content="Conoce cómo preparamos nuestros cakes artesanales: nuestro huerto propio, sabores, proceso e información de contacto.">
 <link rel="stylesheet" href="css/style.css">
 <!-- Favicon simple, un cake dibujado a mano (ver images/favicon.svg) -->
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -16,13 +16,14 @@
      ========================================================= -->
 <header class="site-header">
   <div class="container">
-    <a href="#inicio" class="logo">Galletas <span>Bere</span></a>
+    <a href="#inicio" class="logo">Bere <span>& Miga</span></a>
     <nav>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#huerto">Nuestro huerto</a></li>
         <li><a href="#proceso">Cómo lo hacemos</a></li>
         <li><a href="#sabores">Sabores</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -39,7 +40,7 @@
     <div class="hero-copy">
       <span class="eyebrow">Repostería casera</span>
       <h1>Cakes hechos en casa,<br>con <em>cariño de verdad</em></h1>
-      <p>En Galletas Bere horneamos cakes artesanales tipo pan loaf, desde el clásico de chocolate hasta el de maracuyá. Aquí te mostramos cómo los preparamos, sabor por sabor.</p>
+      <p>En Bere & Miga horneamos cakes artesanales tipo pan loaf, desde el clásico de chocolate hasta el de maracuyá con fruta de nuestro propio huerto. Aquí te mostramos cómo los preparamos, sabor por sabor.</p>
       <div class="hero-ctas">
         <a href="#sabores" class="btn btn-primary">Ver sabores</a>
         <a href="#contacto" class="btn btn-outline">Cómo pedir</a>
@@ -54,20 +55,54 @@
 </section>
 
 <!-- =========================================================
+     NUESTRO HUERTO
+     Diferenciador: cultivamos parte de la fruta que usamos.
+     ========================================================= -->
+<section class="huerto" id="huerto">
+  <div class="container">
+    <div class="huerto-head">
+      <span class="eyebrow">Nuestro huerto</span>
+      <h2 class="section-title">Fruta que cosechamos nosotros mismos</h2>
+      <p class="section-lede">Camino a la costa tenemos un pequeño huerto propio donde sembramos limón, maracuyá, piña, mango y otras frutas. Cuando la cosecha lo permite, esa misma fruta es la que llega a nuestra cocina: así, el maracuyá de nuestros cakes no viene de un empaque genérico, sino de una planta que conocemos y cuidamos nosotros mismos.</p>
+    </div>
+    <div class="huerto-gallery">
+      <figure class="huerto-item">
+        <div class="huerto-photo-frame">
+          <img src="images/huerto-limon.jpg" alt="Limón cosechado en nuestro huerto">
+        </div>
+        <figcaption>Limón</figcaption>
+      </figure>
+      <figure class="huerto-item">
+        <div class="huerto-photo-frame">
+          <img src="images/huerto-maracuya.jpg" alt="Maracuyá cosechado en nuestro huerto">
+        </div>
+        <figcaption>Maracuyá</figcaption>
+      </figure>
+      <figure class="huerto-item">
+        <div class="huerto-photo-frame">
+          <img src="images/huerto-pina.jpg" alt="Piña creciendo en nuestro huerto">
+        </div>
+        <figcaption>Piña</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
      PROCESO GENERAL
      ========================================================= -->
 <section class="proceso" id="proceso">
   <div class="container">
     <div class="proceso-head">
       <span class="eyebrow">Nuestro proceso</span>
-      <h2 class="section-title">De la cocina de Bere a tu mesa</h2>
+      <h2 class="section-title">De nuestra cocina a tu mesa</h2>
       <p class="section-lede">Cada cake se hornea el mismo día del pedido, siguiendo cuatro pasos que nunca cambian, sin importar el sabor.</p>
     </div>
     <div class="proceso-steps">
       <div class="proceso-step">
         <span class="num">01</span>
         <h3>Ingredientes frescos</h3>
-        <p>Elegimos fruta, huevos y lácteos frescos cada semana antes de encender el horno.</p>
+        <p>Elegimos fruta de nuestro huerto cuando la temporada acompaña, además de huevos y lácteos frescos cada semana antes de encender el horno.</p>
       </div>
       <div class="proceso-step">
         <span class="num">02</span>
@@ -90,15 +125,15 @@
 
 <!-- =========================================================
      SABORES / CATÁLOGO
-     Cada tarjeta tiene un acordeón <details> con el proceso
-     paso a paso de ESE sabor (sin cantidades exactas).
+     Página informativa: solo foto, descripción breve y datos
+     generales de cada sabor (sin receta ni cantidades).
      ========================================================= -->
 <section class="sabores" id="sabores">
   <div class="container">
     <div class="sabores-head">
       <span class="eyebrow">Catálogo</span>
       <h2 class="section-title">Nuestros sabores</h2>
-      <p class="section-lede">Toca "Ver cómo se hace" en cualquier sabor para conocer el paso a paso general de su preparación.</p>
+      <p class="section-lede">Siete sabores horneados en casa; varios de ellos con fruta que cosechamos en nuestro propio huerto.</p>
     </div>
 
     <div class="recipe-grid">
@@ -115,29 +150,6 @@
           <span class="tag">Molde pan loaf</span>
           <span class="tag">Horno 180°C</span>
         </div>
-        <details>
-          <summary>Ver cómo se hace</summary>
-          <div class="recipe-detail">
-            <h4>Ingredientes</h4>
-            <ul class="ingredientes">
-              <li>Harina de trigo</li><li>Azúcar</li><li>Cacao amargo</li>
-              <li>Bicarbonato de sodio</li><li>Sal</li><li>Polvo de hornear</li>
-              <li>Leche</li><li>Vinagre blanco</li><li>Huevos</li>
-              <li>Aceite vegetal</li><li>Café caliente</li>
-            </ul>
-            <h4>Paso a paso</h4>
-            <ol>
-              <li>Se combina la leche con vinagre y se deja reposar hasta que la leche se "corte".</li>
-              <li>Se prepara el molde engrasado y enharinado.</li>
-              <li>Se tamizan y mezclan todos los ingredientes secos.</li>
-              <li>Se combina la leche cortada con el aceite vegetal.</li>
-              <li>Se vierten los líquidos sobre los secos y se mezcla apenas hasta integrar.</li>
-              <li>Se incorpora el café caliente y luego los huevos; la masa queda bastante líquida.</li>
-              <li>Se hornea entre 40 y 55 minutos, hasta que un palillo salga limpio.</li>
-              <li>Se deja enfriar en el molde antes de desmoldar.</li>
-            </ol>
-          </div>
-        </details>
       </article>
 
       <!-- ===== 2. MARACUYÁ ===== -->
@@ -151,27 +163,8 @@
         <div class="recipe-tags">
           <span class="tag">Molde pan loaf</span>
           <span class="tag">Horno 170°C</span>
+          <span class="tag tag-huerto">🌿 De nuestro huerto</span>
         </div>
-        <details>
-          <summary>Ver cómo se hace</summary>
-          <div class="recipe-detail">
-            <h4>Ingredientes</h4>
-            <ul class="ingredientes">
-              <li>Harina de trigo</li><li>Azúcar</li><li>Polvo para hornear</li>
-              <li>Sal</li><li>Huevos</li><li>Aceite vegetal</li>
-              <li>Mantequilla</li><li>Concentrado de maracuyá</li><li>Leche</li>
-            </ul>
-            <h4>Paso a paso</h4>
-            <ol>
-              <li>Se prepara el molde engrasado y enharinado.</li>
-              <li>Se bate la mantequilla con el azúcar hasta lograr una mezcla pálida y esponjosa; se añaden el aceite y los huevos uno a uno.</li>
-              <li>Se disuelve la leche y se mezcla con el concentrado de maracuyá.</li>
-              <li>Se incorpora la harina tamizada alternando con la mezcla de leche y maracuyá, comenzando y terminando con harina.</li>
-              <li>Se hornea entre 40 y 55 minutos, hasta que un palillo salga limpio.</li>
-              <li>Se deja enfriar en el molde antes de desmoldar.</li>
-            </ol>
-          </div>
-        </details>
       </article>
 
       <!-- ===== 3. ZANAHORIA ===== -->
@@ -186,28 +179,6 @@
           <span class="tag">Molde pan loaf</span>
           <span class="tag">Horno 175°C</span>
         </div>
-        <details>
-          <summary>Ver cómo se hace</summary>
-          <div class="recipe-detail">
-            <h4>Ingredientes</h4>
-            <ul class="ingredientes">
-              <li>Harina de trigo</li><li>Polvo de hornear</li><li>Bicarbonato de sodio</li>
-              <li>Sal</li><li>Azúcar</li><li>Canela</li><li>Nuez moscada</li>
-              <li>Huevos</li><li>Aceite vegetal</li><li>Vinagre blanco</li>
-              <li>Leche caliente</li><li>Zanahoria rallada</li><li>Nueces pecanas</li>
-            </ul>
-            <h4>Paso a paso</h4>
-            <ol>
-              <li>Se prepara el molde engrasado y enharinado.</li>
-              <li>Se mezclan los ingredientes secos: harina, polvo de hornear, bicarbonato, sal, azúcar, canela y nuez moscada.</li>
-              <li>Se baten los huevos con el aceite, el vinagre y la leche caliente.</li>
-              <li>Se combinan los líquidos con los secos, mezclando apenas hasta integrar.</li>
-              <li>Se incorpora la zanahoria rallada y las nueces picadas con movimientos suaves.</li>
-              <li>Se hornea entre 40 y 55 minutos, hasta que un palillo salga limpio.</li>
-              <li>Se deja enfriar en el molde antes de desmoldar.</li>
-            </ol>
-          </div>
-        </details>
       </article>
 
       <!-- ===== 4. NARANJA ===== -->
@@ -222,43 +193,13 @@
           <span class="tag">Molde pan loaf</span>
           <span class="tag">Horno 180°C</span>
         </div>
-        <details>
-          <summary>Ver cómo se hace</summary>
-          <div class="recipe-detail">
-            <h4>Ingredientes</h4>
-            <ul class="ingredientes">
-              <li>Harina de trigo</li><li>Azúcar</li><li>Polvo de hornear</li>
-              <li>Sal</li><li>Ralladura de naranja</li><li>Huevos</li>
-              <li>Aceite vegetal</li><li>Leche</li><li>Vinagre blanco</li>
-              <li>Jugo de naranja fresco</li>
-            </ul>
-            <h4>Paso a paso</h4>
-            <ol>
-              <li>Se combina la leche con vinagre y se deja reposar hasta que se "corte".</li>
-              <li>Se prepara el molde engrasado y enharinado.</li>
-              <li>Se frota la ralladura de naranja con el azúcar hasta que suelte su aroma.</li>
-              <li>Se baten los huevos con el azúcar aromatizada hasta que aclare y espume; se incorporan el aceite, el jugo de naranja y la leche cortada.</li>
-              <li>Se agrega la harina tamizada con el polvo de hornear y la sal, en dos partes, con movimientos envolventes.</li>
-              <li>Se hornea entre 40 y 55 minutos, hasta que un palillo salga limpio.</li>
-              <li>Se deja enfriar en el molde antes de desmoldar.</li>
-            </ol>
-          </div>
-        </details>
       </article>
 
-      <!-- ===== 5. VAINILLA (sin foto real) ===== -->
+      <!-- ===== 5. VAINILLA ===== -->
       <article class="recipe-card">
         <div class="recipe-photo-frame">
-          <div class="recipe-placeholder">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 55 L50 30 L85 55 V80 H15 Z" stroke="#4A2E20" stroke-width="3" stroke-linejoin="round"/>
-              <path d="M15 65 H85" stroke="#4A2E20" stroke-width="3"/>
-              <path d="M50 30 V20" stroke="#4A2E20" stroke-width="3" stroke-linecap="round"/>
-              <circle cx="50" cy="14" r="4" stroke="#C1602C" stroke-width="3"/>
-            </svg>
-          </div>
+          <img src="images/vainilla.jpg" alt="Cake de vainilla en rebanadas">
         </div>
-        <p class="placeholder-caption">Foto próximamente</p>
         <span class="recipe-eyebrow">Receta N.º 005</span>
         <h3>Vainilla</h3>
         <p class="recipe-desc">El favorito de siempre: esponjoso, aromático y con el sabor puro de una buena esencia de vainilla.</p>
@@ -266,40 +207,13 @@
           <span class="tag">Molde pan loaf</span>
           <span class="tag">Horno 175°C</span>
         </div>
-        <details>
-          <summary>Ver cómo se hace</summary>
-          <div class="recipe-detail">
-            <h4>Ingredientes</h4>
-            <ul class="ingredientes">
-              <li>Harina de trigo</li><li>Polvo para hornear</li><li>Sal</li>
-              <li>Azúcar</li><li>Huevos</li><li>Aceite vegetal</li>
-              <li>Leche</li><li>Esencia de vainilla</li>
-            </ul>
-            <h4>Paso a paso</h4>
-            <ol>
-              <li>Se prepara el molde engrasado y enharinado.</li>
-              <li>Se baten los huevos con el azúcar hasta lograr una mezcla pálida y espesa.</li>
-              <li>Se incorporan el aceite, la esencia de vainilla y la leche, mezclando a velocidad baja.</li>
-              <li>Se añade la harina tamizada con el polvo de hornear y la sal, mezclando suavemente sin batir de más.</li>
-              <li>Se hornea entre 40 y 55 minutos, hasta que un palillo salga limpio.</li>
-              <li>Se deja enfriar en el molde antes de desmoldar.</li>
-            </ol>
-          </div>
-        </details>
       </article>
 
-      <!-- ===== 6. GENOISE (sin foto real) ===== -->
+      <!-- ===== 6. GENOISE ===== -->
       <article class="recipe-card">
         <div class="recipe-photo-frame">
-          <div class="recipe-placeholder">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="50" cy="70" rx="34" ry="10" stroke="#4A2E20" stroke-width="3"/>
-              <path d="M16 70 V50 C16 44 82 44 84 50 V70" stroke="#4A2E20" stroke-width="3"/>
-              <ellipse cx="50" cy="50" rx="34" ry="10" stroke="#C1602C" stroke-width="3"/>
-            </svg>
-          </div>
+          <img src="images/genoise.png" alt="Cake genoise recién horneado">
         </div>
-        <p class="placeholder-caption">Foto próximamente</p>
         <span class="recipe-eyebrow">Receta N.º 006</span>
         <h3>Genoise</h3>
         <p class="recipe-desc">Bizcocho ligero y aireado, la base perfecta para nuestro pastel de tres leches.</p>
@@ -307,27 +221,6 @@
           <span class="tag">Molde redondo</span>
           <span class="tag">Horno 175°C</span>
         </div>
-        <details>
-          <summary>Ver cómo se hace</summary>
-          <div class="recipe-detail">
-            <h4>Ingredientes</h4>
-            <ul class="ingredientes">
-              <li>Harina de trigo</li><li>Maicena</li><li>Polvo para hornear</li>
-              <li>Sal</li><li>Huevos (claras y yemas separadas)</li><li>Azúcar</li>
-              <li>Agua tibia</li><li>Extracto de vainilla</li><li>Aceite vegetal</li>
-            </ul>
-            <h4>Paso a paso</h4>
-            <ol>
-              <li>Se prepara el molde engrasado y enharinado.</li>
-              <li>Se tamizan la harina, la maicena, el polvo de hornear y la sal.</li>
-              <li>Se baten las claras a punto de nieve, añadiendo azúcar poco a poco hasta lograr un merengue firme.</li>
-              <li>Se baten las yemas con agua tibia y el resto del azúcar hasta que espesen y blanqueen; se incorporan la vainilla y el aceite.</li>
-              <li>Se combinan con cuidado los secos y el merengue con las yemas, con movimientos envolventes, sin bajar la mezcla.</li>
-              <li>Se hornea entre 40 y 55 minutos, hasta que un palillo salga limpio.</li>
-              <li>Se deja enfriar por completo en el molde antes de bañar con la mezcla de tres leches.</li>
-            </ol>
-          </div>
-        </details>
       </article>
 
       <!-- ===== 7. BANANA ===== -->
@@ -342,33 +235,11 @@
           <span class="tag">Molde pan loaf</span>
           <span class="tag">Horno 180°C</span>
         </div>
-        <details>
-          <summary>Ver cómo se hace</summary>
-          <div class="recipe-detail">
-            <h4>Ingredientes</h4>
-            <ul class="ingredientes">
-              <li>Harina de trigo</li><li>Azúcar moreno</li><li>Bananos maduros</li>
-              <li>Aceite de oliva suave o de girasol</li><li>Huevo</li>
-              <li>Polvo para hornear</li><li>Bicarbonato de sodio</li>
-              <li>Canela</li><li>Sal</li>
-            </ul>
-            <h4>Paso a paso</h4>
-            <ol>
-              <li>Se prepara el molde engrasado y enharinado.</li>
-              <li>Se aplastan los bananos con un tenedor hasta formar un puré.</li>
-              <li>Se añade el azúcar moreno al puré, luego el huevo y por último el aceite, mezclando hasta homogeneizar.</li>
-              <li>Se tamizan y añaden los ingredientes secos: harina, polvo de hornear, bicarbonato, canela y sal.</li>
-              <li>Se combinan con movimientos envolventes, sin sobremezclar.</li>
-              <li>Se hornea entre 40 y 55 minutos, hasta que un palillo salga limpio.</li>
-              <li>Se deja enfriar sobre una rejilla antes de cortar en rebanadas.</li>
-            </ol>
-          </div>
-        </details>
       </article>
 
     </div>
 
-    <p class="recipe-note">* Las cantidades exactas de cada receta no se publican aquí; si quieres el detalle completo, escríbenos por WhatsApp.</p>
+    <p class="recipe-note">¿Quieres saber más sobre algún sabor? Escríbenos por WhatsApp.</p>
   </div>
 </section>
 
@@ -394,13 +265,13 @@
         <h3>Instagram</h3>
         <p>Fotos de nuestros cakes y pedidos recientes.</p>
         <!-- REEMPLAZAR: usuario real de Instagram -->
-        <a class="btn btn-outline" href="https://instagram.com/galletas.bere" target="_blank" rel="noopener">@galletas.bere</a>
+        <a class="btn btn-outline" href="https://instagram.com/bere.miga" target="_blank" rel="noopener">@bere.miga</a>
       </div>
       <div class="contact-card">
         <h3>Correo</h3>
         <p>Para pedidos grandes o eventos especiales.</p>
         <!-- REEMPLAZAR: correo real -->
-        <a class="btn btn-outline" href="mailto:hola@galletasbere.com">hola@galletasbere.com</a>
+        <a class="btn btn-outline" href="mailto:hola@bereymiga.com">hola@bereymiga.com</a>
       </div>
     </div>
     <p class="contact-placeholder-note">Nota para Bere: estos son datos de ejemplo. Busca "REEMPLAZAR" en el archivo index.html para poner tu número, usuario y correo reales.</p>
@@ -412,7 +283,7 @@
      ========================================================= -->
 <footer class="site-footer">
   <div class="container">
-    <p><strong>Galletas Bere</strong> — hecho con cariño, horneado en casa.</p>
+    <p><strong>Bere & Miga</strong> — hecho con cariño, horneado en casa.</p>
   </div>
 </footer>
 

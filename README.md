@@ -1,4 +1,4 @@
-# Galletas Bere — sitio web
+# Bere & Miga — sitio web
 
 Sitio de una sola página hecho con HTML, CSS y JavaScript simple (sin frameworks ni build tools). No necesita instalación de nada para funcionar.
 
@@ -27,16 +27,14 @@ Eso es todo — así puedes revisar cambios antes de subirlos a internet.
 
 Este es un **borrador**. Antes de publicarlo de verdad, busca estos puntos marcados con comentarios `REEMPLAZAR` dentro de `index.html`:
 
-1. **Nombre del emprendimiento**: por ahora dice "Galletas Bere" en el logo, el título de la pestaña (`<title>`) y el pie de página. Búscalo y reemplázalo si cambia el nombre final.
-2. **Datos de contacto** (sección `Contacto`, cerca del final del archivo):
+1. **Datos de contacto** (sección `Contacto`, cerca del final del archivo):
    - Número de WhatsApp real (`https://wa.me/593999999999` → reemplaza los números por el número real, sin espacios ni signos, con código de país).
    - Usuario real de Instagram.
    - Correo real.
-3. **Fotos de Vainilla y Genoise**: esas dos tarjetas usan un dibujo simple en vez de foto (el documento original no traía la foto de esos dos sabores). Cuando tengas las fotos:
-   - Guarda las imágenes en la carpeta `images/` (por ejemplo `vainilla.jpg` y `genoise.jpg`).
-   - En `index.html`, busca el bloque `<!-- ===== 5. VAINILLA -->` y `<!-- ===== 6. GENOISE -->`, y reemplaza el `<div class="recipe-placeholder">...</div>` por `<img src="images/vainilla.jpg" alt="Cake de vainilla">` (o `genoise.jpg`), igual que en las otras tarjetas.
-   - También puedes borrar la línea `<p class="placeholder-caption">Foto próximamente</p>` de esas dos tarjetas.
-4. **Cantidades de las recetas**: por pedido tuyo, el sitio muestra el proceso general **sin** las cantidades exactas de cada ingrediente (para no revelar la receta completa). Si en algún momento quieres mostrar cantidades, puedes agregarlas directamente en la lista de ingredientes de cada tarjeta, dentro de `index.html`.
+2. **Fotos**: ya están subidas `vainilla.jpg`, `genoise.png` y las tres fotos del huerto (`huerto-limon.jpg`, `huerto-maracuya.jpg`, `huerto-pina.jpg`). La galería de "Nuestro huerto" por ahora solo muestra esas tres frutas porque no hay foto de mango — si consigues una, guárdala como `images/huerto-mango.jpg` y avisa para agregarla a la galería.
+   - También puedes reemplazar `chocolate.jpg`, `naranja.jpg`, `banana.jpg`, `maracuya.jpg` y `zanahoria.jpg` por versiones de mejor resolución si las tienes; basta con guardar el archivo nuevo con el mismo nombre.
+
+El sitio es informativo: no muestra la receta completa (ingredientes ni paso a paso) de ningún sabor, solo una descripción breve.
 
 ## Cómo editar el contenido
 
