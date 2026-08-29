@@ -458,12 +458,6 @@ p{ margin:0; }
   font-size:.92rem;
 }
 .contact-card a.btn{ margin-top:16px; }
-.contact-placeholder-note{
-  margin-top: 34px;
-  font-size:.85rem;
-  color: #C9B7A2;
-  font-style: italic;
-}
 
 @media (max-width: 860px){
   .contact-grid{ grid-template-columns: 1fr; }
