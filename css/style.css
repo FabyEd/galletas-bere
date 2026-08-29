@@ -111,6 +111,13 @@ p{ margin:0; }
   color: var(--cocoa);
 }
 .btn-outline:hover{ background: var(--cocoa); color: var(--paper); }
+.btn-soon{
+  background: transparent;
+  border: 2px dashed rgba(255,253,248,0.4);
+  color: #E7D6C4;
+  cursor: default;
+}
+.btn-soon:hover{ transform: none; }
 
 /* ---------- HEADER ---------- */
 .site-header{
